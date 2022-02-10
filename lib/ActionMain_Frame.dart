@@ -28,12 +28,12 @@ class _ActionMainState extends State<ActionMain> {
       ),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.all(16),
         child: Column(
           children: <Widget>[
             Expanded(
                 child: ListView.builder(
-                    itemCount: _itemList.length,
+                  padding: EdgeInsets.all(16),
+                  itemCount: _itemList.length,
                     itemBuilder: (context, index){
 
                       final contentList = _itemList[index];
@@ -50,6 +50,13 @@ class _ActionMainState extends State<ActionMain> {
                             ),
                           ),
                           key: Key(contentList),
+                          direction: DismissDirection.endToStart,
+                          onDismissed: (direction){
+                            print("direction: ${direction.toString()}");
+                          },
+                          background: Container(
+                            color: mainColor,
+                          ),
                       );
 
                     },
