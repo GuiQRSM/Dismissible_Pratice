@@ -14,6 +14,17 @@ class _ActionMainState extends State<ActionMain> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: secColor,
+      appBar: AppBar(
+        title: Text("Dismissible Pratice"),
+        titleTextStyle: TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 20,
+          color: secColor
+        ),
+        backgroundColor: mainColor,
+      ),
+    );
   }
 }
