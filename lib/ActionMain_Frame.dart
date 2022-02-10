@@ -39,8 +39,17 @@ class _ActionMainState extends State<ActionMain> {
                       final contentList = _itemList[index];
 
                       return Dismissible(
-                          child: ListTile(),
-                          key: key,
+                          child: ListTile(
+                            title: Text(
+                              contentList,
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600,
+                                color: mainColor,
+                              ),
+                            ),
+                          ),
+                          key: Key(contentList),
                       );
 
                     },
