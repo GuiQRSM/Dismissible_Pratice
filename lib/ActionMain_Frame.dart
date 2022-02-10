@@ -36,15 +36,11 @@ class _ActionMainState extends State<ActionMain> {
                     itemCount: _itemList.length,
                     itemBuilder: (context, index){
 
-                      return ListTile(
-                        title: Text(
-                          _itemList[index],
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                            color: mainColor
-                          ),
-                        ),
+                      final contentList = _itemList[index];
+
+                      return Dismissible(
+                          child: ListTile(),
+                          key: key,
                       );
 
                     },
