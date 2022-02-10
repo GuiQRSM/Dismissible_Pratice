@@ -55,8 +55,11 @@ class _ActionMainState extends State<ActionMain> {
                             print("direction: ${direction.toString()}");
                           },
                           background: Container(
-                            color: mainColor,
+                            color: Colors.red,
                           ),
+                        secondaryBackground: Container(
+                          color: Colors.green,
+                        ),
                       );
 
                     },
