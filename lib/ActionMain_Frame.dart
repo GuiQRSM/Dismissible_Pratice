@@ -32,7 +32,6 @@ class _ActionMainState extends State<ActionMain> {
           children: <Widget>[
             Expanded(
                 child: ListView.builder(
-                  padding: EdgeInsets.all(16),
                   itemCount: _itemList.length,
                     itemBuilder: (context, index){
 
@@ -56,9 +55,29 @@ class _ActionMainState extends State<ActionMain> {
                           },
                           background: Container(
                             color: Colors.red,
+                            padding: EdgeInsets.all(16),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Icon(
+                                    Icons.delete_rounded,
+                                    color: secColor,
+                                ),
+                              ],
+                            ),
                           ),
-                        secondaryBackground: Container(
+                        secondaryBackground:  Container(
                           color: Colors.green,
+                          padding: EdgeInsets.all(16),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Icon(
+                                Icons.edit_rounded,
+                                color: secColor,
+                              ),
+                            ],
+                          ),
                         ),
                       );
 
