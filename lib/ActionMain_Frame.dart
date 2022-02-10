@@ -50,7 +50,7 @@ class _ActionMainState extends State<ActionMain> {
                             ),
                           ),
                           key: Key(contentList),
-                          direction: DismissDirection.endToStart,
+                          direction: DismissDirection.horizontal,
                           onDismissed: (direction){
                             print("direction: ${direction.toString()}");
                           },
